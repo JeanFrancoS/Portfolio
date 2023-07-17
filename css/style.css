@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "PlayRegular";
+  src: url("/Fuente/Play-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PlayRegular", sans-serif;
+  cursor: default;
+}
+/* HEADER */
+.header {
+  /* background-color: darkgrey; */
+  background-color: black;
+  width: 100%;
+  color: rgb(235, 235, 18);
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  margin: 1rem 0 1rem 5%;
+  font-size: 26px;
+  text-align: center;
+}
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: center;
+  font-size: 24px;
+}
+.navLista {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.listaItem {
+  list-style: none;
+  text-align: center;
+  margin: auto;
+}
+.link:hover {
+  color: red;
+}
+.link {
+  text-decoration: none;
+  color: rgb(235, 235, 18);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.iconHamburguer {
+  cursor: pointer;
+  margin: auto;
+  margin-right: 2%;
+}
+.submenu {
+  position: absolute;
+  background-color: #00bb2d;
+  display: block;
+  margin-left: -75px;
+  padding: 9px;
+  /* margin-top: 25px; */
+}
+.navLista .listaItem a {
+  float: left;
+}
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;
+}
+.navLista > li:hover .submenu,
+.navLista > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
+/* PROYECTOS */
+.Proyectos {
+  background-color: rgb(255, 67, 46);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* CONOCIMIENTOS */
+.Conocimientos {
+  background-color: rgb(255, 129, 115);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* SOBRE MI */
+.SobreMi {
+  background-color: rgb(255, 129, 115);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.tit {
+  margin: 2rem 1rem;
+}
+.descripcion {
+  margin-left: 2rem;
+}
+.btnCv {
+  margin: 2rem;
+}
+.curriculum {
+  text-decoration: none;
+  color: black;
+}
+/* FORMULARIO DE CONTACTO */
+.Contactame {
+  background-color: rgb(248, 200, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.titulo {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.formulario {
+  width: 60%;
+}
+.pAclaracion {
+  color: rgb(117, 117, 117);
+  margin-top: 1rem;
+}
+.datosPersonales {
+  display: flex;
+  justify-content: space-between;
+}
+.datos {
+  width: 32%;
+  margin-top: 0.3rem;
+}
+.txt {
+  padding: 0.75rem;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid gainsboro;
+  cursor: auto;
+}
+.msje {
+  width: 100%;
+  resize: none;
+}
+.asunto {
+  margin: 1rem 0;
+}
+.btn {
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 2px transparent solid;
+  cursor: pointer;
+  background-color: rgb(215, 218, 50);
+  /* background-color: rgb(235, 235, 18); */
+}
+.btnesForm {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+}
+.btnForm {
+  width: 45%;
+  font-size: 25px;
+}
+.btn:hover {
+  border-color: rgb(102, 109, 12);
+}
+.chatWpp {
+  background-color: #00bb2d;
+  background-color: #00d232;
+  border-radius: 50px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 30px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  width: 50px;
+  z-index: 100;
+  left: auto;
+  right: 2rem;
+  padding-top: 7px;
+  cursor: pointer;
+}
+.chatWpp:hover {
+}
+.wppIcon {
+  cursor: pointer;
+}
