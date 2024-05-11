@@ -1,44 +1,38 @@
-<?php ob_start(); #esto evita los errores de envios de headers
-set_error_handler("var_dump");
-include 'conexion.php';
-session_start(); #inicializamos variables de sesion
- #si esta logueado lo dejo trabajar y sino lo mando al login de nuevo 
- if ( isset( $_SESSION['usuario'] )!='Admin'){
-    header("location:login.php");
-    die();
-} ?>
+<?php include './conexion/conexion.php'; ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dongle&family=Edu+VIC+WA+NT+Beginner:wght@500&family=Fjalla+One&family=Lato:ital@1&family=Montserrat:wght@300&family=Oswald:wght@200&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Roboto:wght@300&family=The+Nautigal:wght@700&family=Updock&display=swap&family=Edu+SA+Beginner:wght@500" rel="stylesheet"> -->
-     <!-- Bootstrap CSS -->
-     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
-     <link rel="stylesheet" href="./css/style-admin.css"> 
-     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
-     <title>Portfolio</title>
+    <title>Jean Franco Solé</title>
+    <script src="https://kit.fontawesome.com/45b2b8f4cd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./css/style-login.css">  -->
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles1.css">
 </head>
-<body>
+<body class="body">
     <header class="header">
         <div class="menu">
             <div class="logo">
-                <h2>JFS</h2>
+                <h1>Jean Franco Solé</h1>
             </div>
             <nav class="navHeader">
                 <ul class="navLista">
-                    <li class="listaItem">
-                        <a class="link" aria-current="page"  href="index_admin.php">Ver proyectos</a>
-                    </li>
-                    <li class="listaItem">
-                        <a class="link" aria-current="page"  href="galeria.php">Abm</a>
-                    </li>
-                    <li class="listaItem">
-                        <a class="link" href="cerrar.php">Cerrar Sesión de User: <span><?php echo $_SESSION['usuario']; ?></span> </a> 
-                    </li>
+                    <li class="listaItem"><a href="#Proyectos" class="link">Proyectos</a></li>
+                    <li class="listaItem"><a href="#Conocimientos" class="link">Conocimientos</a></li>
+                    <li class="listaItem"><a href="#SobreMi" class="link">Sobre mi</a></li>
+                    <li class="listaItem"><a href="#Contactame" class="link">Contactame</a></li>
+                    <!-- <li class="listaItem"><img src="" alt=""></li> 
+                    <!-- <li class="listaItem"><i class="link iconHamburguer fa-solid fa-gear"></i>
+                        <ul class="submenu"> -->
+                            <!-- <li class="listaItem"><a href="login.php" class="link">Acceder</a></li> -->
+                            <!-- <li class="listaItem"><input type="checkbox" class="link"></input></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="listaItem"><a href="#" class="link">Acceder</a></li> 
+                    <!-- <input type=""> BTN PARA MODO OSCURO-->
                 </ul>
             </nav>
         </div>

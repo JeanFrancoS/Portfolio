@@ -4,8 +4,9 @@ class conexion{
      #atributos que son propios del objeto
      private $servidor ="localhost";
      private $usuario ="id21022779_jeanfrancos";
-     private $pass = 'Ormabo2023';
+     private $pass = 'Ormabo2023.';
      private $conexion;
+    //  id21022779_proyectos
  
     
      public function __construct(){

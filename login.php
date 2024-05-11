@@ -1,30 +1,26 @@
 <?php ob_start(); ?>
-<?php session_start();
-    #validar datos
+<?php set_error_handler("var_dump");
+include 'conexion.php';
+session_start();
     if ($_POST){
       #conexion a la base
       #mail
       #contraseña
       #es_admin s o n 
-      /*
-      select mail, pass
-      from usuarios where
-      es_admin = 'S';*/
-      /* USUARIOS["mail"] */
-        if( ($_POST['usuario']=="Admin") && ($_POST['pass']=='123') ){
-          $_SESSION['usuario']="Admin";
-        //   $_SESSION['logueado']='S';
-          #redirecciono porque ingreso ok 
+        $conexion = new conexion();
+        $sql = "SELECT * FROM `admin` WHERE `Estado` = 1";
+        $usuario = $conexion->ejecutar($sql);
+        echo '<script> alert($usuario);</script>';
+        $nombre_Usuario = $_POST['usuario'];
+        $nombre_Contraseña = $_POST['pass'];
+        if( ($_POST['usuario'] == 'admin') && ($_POST['pass'] == '123') ){
+          $_SESSION['usuario'] = $nombre_Usuario;
+          $_SESSION['logueado']='S';
           header("location:index_admin.php");
           die();
-         // exit;
         }
         else{
-        // alert("Usuario y/o Contraseña incorrecta");
-        // header("location:login.php");   
             echo '<script> alert("Usuario y/o Contraseña incorrecta");</script>';
-            
-            // die();
         }
     }?>
 <!DOCTYPE html>
@@ -45,8 +41,9 @@
                 <form action="login.php" method="post">
                     <input type="text" name="usuario" id="usuario" class="field" placeholder="Usuario" required>
                     <input type="password" name="pass" id="subject" class="field" placeholder="Password" required>
+                    <a href="index.php"><input type="button" value="Volver" class="btn btnVolver" href="index.php"></a>
                     <input type="submit" value="Enviar" class="btn">
-                    <p>Usuario: Admin <br> Pass: 123 </p>
+                    <!-- <p>Usuario: Admin <br> Pass: 123 </p> -->
                 </form>
         </div>
     </div>

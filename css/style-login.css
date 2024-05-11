@@ -90,7 +90,7 @@ textarea {
   min-height: 150px;
 }
 .btn {
-  width: 100%;
+  width: 40%;
   padding: 0.5rem 1rem;
   background-color: #9a0d0d;
   color: #bdba2c;
@@ -103,6 +103,11 @@ textarea {
 }
 .btn:hover {
   filter: brightness(170%);
+}
+.btnVolver {
+  text-decoration: none;
+  background-color: gray;
+  /* width: 100%; */
 }
 .field:focus {
   border: 2px solid #9a0d0d;
